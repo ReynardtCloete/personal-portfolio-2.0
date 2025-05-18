@@ -42,7 +42,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10rem;
-    padding: 0 50px;
+    padding: 0 25px;
 }
 
 
@@ -389,6 +389,10 @@ header.sticky {
 
     .numbered-heading::after {
         max-width: 200px;
+    }
+
+    .my-name {
+        font-size: 3rem;
     }
 }
 
