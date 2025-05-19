@@ -35,7 +35,7 @@ body {
     display: flex;
     flex-direction: column;                                                                  
     font-size: 0.9rem;    
-    gap: 10rem;                               
+    gap: 5rem;                               
 }
 
 main {  
@@ -189,7 +189,7 @@ header.sticky {
     display: flex;
     flex-direction: column;
     gap: 1.3rem;
-    margin-bottom: 20rem;
+    margin-bottom: 10rem;
 }
 
 .hi {
@@ -294,15 +294,18 @@ header.sticky {
 
 .about-icons {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1.1rem;
 }
 
 .tag {
     padding: 0.25rem 0.5rem;
+    border: 1px solid var(--green);
     border-radius: 0.3rem;
-    background: var(--background-accent);
+    background: var(--dark-navy);
     color: var(--green);
+    font-weight: 500;
 }
 
 .image-container {
@@ -327,7 +330,7 @@ header.sticky {
     width: 100%; 
     height: 100%;
     border-radius: 8px;
-    background-color: rgba(100, 255, 218, 0.4);
+    background-color: rgba(100, 255, 218, 0.6);
     transition: opacity 0.8s ease;
 }
 
@@ -335,6 +338,46 @@ header.sticky {
     opacity: 0;
     cursor: pointer;
 }
+
+/* === PROJECTS SECTION === */
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.project-card {
+    position: relative; /* Somehow the overlay is on top of page before this is applied */
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: rgba(17, 50, 100, 0.6); /* dark transparent overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* aligns all text to the right */
+    text-align: right;
+}   
+
+
+
+
 
 
 
