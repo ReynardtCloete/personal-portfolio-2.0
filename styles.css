@@ -42,7 +42,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10rem;
-    padding: 0 25px;
+    padding: 0 50px;
 }
 
 
@@ -247,10 +247,6 @@ header.sticky {
 
 /* === ABOUT SECTION === */
 
-#about {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
 .numbered-heading {
     display: flex;
     align-items: center;
@@ -279,6 +275,7 @@ header.sticky {
     gap: 2rem;
     margin-bottom: 2rem;
 }
+
 
 .about-text {
     display: flex;
@@ -309,7 +306,6 @@ header.sticky {
 }
 
 .image-container {
-    position: relative;
     display: block; /* matches image size */
     width: fit-content;
     margin: 0 auto; /*centres image*/
@@ -317,63 +313,40 @@ header.sticky {
 
 .profile-pic {
     width: 100%;
-    max-width: 350px;
+    max-width: 350px; /* Initial max width */
     height: auto;
     display: block;
     border-radius: 8px;
-}
-
-.overlay {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    border-radius: 8px;
-    background-color: rgba(100, 255, 218, 0.6);
-    transition: opacity 0.8s ease;
-}
-
-.image-container:hover .overlay {
-    opacity: 0;
-    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 /* === PROJECTS SECTION === */
 
-.project-content {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+.projects-content {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 15px;
 }
 
 .project-card {
-    position: relative; /* Somehow the overlay is on top of page before this is applied */
-    width: 100%;
-    overflow: hidden;
-}
-
-.project-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    background-color: rgba(17, 50, 100, 0.6); /* dark transparent overlay */
-    color: white;
+    padding: 1.5rem;
+    background-color: var(--light-navy);
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end; /* aligns all text to the right */
-    text-align: right;
-}   
+    gap: 1rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
 
 
 
@@ -399,10 +372,17 @@ header.sticky {
 
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
 
+@media(min-width: 615px) {
 
+    .projects-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
 
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
 
 @media(min-width: 768px) {
+
     header {
         padding: 0 50px;
     }
@@ -426,27 +406,37 @@ header.sticky {
         display: none;
     }
 
-    #about {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     .numbered-heading::after {
         max-width: 200px;
     }
 
-    .my-name {
-        font-size: 3rem;
+    .projects-content {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-icons {
+        justify-content: flex-start;
+    }
+
+    .profile-pic {
+        width: 100%;
+        max-width: 300px; 
+    }
+
+
 }
-
-
-
 
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
 
+@media(min-width: 1080px) { 
 
-
-
-@media(max-width: 1080px) {
-
+    .profile-pic {
+       width: 100%;
+       max-width: 400px;
+    }
 }
