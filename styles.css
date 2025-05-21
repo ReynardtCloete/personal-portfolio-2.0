@@ -17,7 +17,6 @@
     --background-accent: rgba(45, 212, 191, .1);
 }
 
-
 html {
     scroll-behavior: smooth;
 }
@@ -41,7 +40,7 @@ body {
 main {  
     display: flex;
     flex-direction: column;
-    gap: 10rem;
+    gap: 18rem;
     padding: 0 35px;
 }
 
@@ -294,6 +293,7 @@ header.sticky {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.1rem;
+    padding: 0 4rem;
 }
 
 .tag {
@@ -329,7 +329,7 @@ header.sticky {
 }
 
 .project-card {
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: var(--light-navy);
     border-radius: 5px;
     display: flex;
@@ -339,34 +339,78 @@ header.sticky {
 
 .project-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
 }
 
+.fa-github {
+    color: var(--green);
+}
 
+.fa-arrow-up-right-from-square {
+    color: var(--blue);
+}
 
+.project-card h3 {
+    font-size: 1.2rem;
+}
 
+.project-card p {
+    color: var(--light-slate);
+    line-height: 1.7rem;
+    margin-bottom: 1.5rem;
+}
 
+.project-card ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    font-size: 0.7rem;
+    color: var(--slate);
+}
 
+/* === CONTACT SECTION === */
 
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 0 4rem;
+}
 
+.contact-p-1 {
+    color: var(--green);
+    font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+}
 
+.contact-content h1 {
+    font-size: 2.5rem;
+}
 
+.contact-p-2 {
+   font-size: 1rem;
+   color: var(--slate);
+   line-height: 1.5rem;
+   margin-bottom: 3rem;
+}
 
+.email-button {
+    color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    letter-spacing: 0.2rem;
+    transition: 0.7s ease;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.email-button:hover {
+    background-color: var(--green);
+    color: var(--dark-navy);
+    font-weight: 600;
+}
 
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -383,11 +427,16 @@ header.sticky {
 
 @media(min-width: 768px) {
 
-    header {
-        padding: 0 50px;
+    main {  
+        padding: 0 90px;
     }
 
-     .navbar {
+    header {
+        padding: 0 50px;
+        margin-bottom: 14rem;
+    }
+
+    .navbar {
         position: static; /*-Removes fixed positioning-*/
         background-color: transparent;
         flex-direction: row;
@@ -406,26 +455,74 @@ header.sticky {
         display: none;
     }
 
-    .numbered-heading::after {
-        max-width: 200px;
+    .hi {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
     }
 
-    .projects-content {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    .my-name {
+        font-size: 4vw;
+    }
+
+    .about-icons {
+        justify-content: center;
+        width: 200%; 
+        padding: 0; /*-Takes up 100% of first side of grid and 100% of the second-*/
+    }
+
+    .numbered-heading::after {
+        max-width: 200px;
     }
 
     .about-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
-    .about-icons {
-        justify-content: flex-start;
-    }
-
+    
     .profile-pic {
         width: 100%;
-        max-width: 300px; 
+        max-width: 300px;
+    }
+
+    .projects-content {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .bar-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 30px;
+        gap: 2rem;
+    }
+
+    .bar-1 i {
+        font-size: 1.2rem;
+        color: var(--green);
+    }
+
+    .vertical-line {
+        width: 1px;
+        height: 100px;
+        background-color: var(--green);
+    }
+
+    .bar-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        right: 30px;
+        gap: 2rem;
+    }
+
+    .vertical-email {
+        writing-mode: vertical-rl;
+        letter-spacing: 0.2rem;
+        color: var(--green);
     }
 
 
