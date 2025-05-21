@@ -40,8 +40,12 @@ body {
 main {  
     display: flex;
     flex-direction: column;
-    gap: 18rem;
-    padding: 0 35px;
+    gap: 12rem;
+    padding: 0 30px;
+}
+
+.side-bars {
+    display: none;
 }
 
 
@@ -293,7 +297,6 @@ header.sticky {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.1rem;
-    padding: 0 4rem;
 }
 
 .tag {
@@ -377,7 +380,6 @@ header.sticky {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
-    padding: 0 4rem;
 }
 
 .contact-p-1 {
@@ -486,6 +488,10 @@ header.sticky {
 
     .projects-content {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .side-bars {
+        display: block;
     }
 
     .bar-1 {
