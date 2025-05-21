@@ -42,7 +42,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10rem;
-    padding: 0 50px;
+    padding: 0 35px;
 }
 
 
