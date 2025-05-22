@@ -375,6 +375,10 @@ header.sticky {
 
 /* === CONTACT SECTION === */
 
+#contact {
+    margin-bottom: 200px;
+}
+
 .contact-content {
     display: flex;
     flex-direction: column;
@@ -389,14 +393,18 @@ header.sticky {
 }
 
 .contact-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    font-weight: 800;
 }
 
 .contact-p-2 {
    font-size: 1rem;
    color: var(--slate);
-   line-height: 1.5rem;
+   line-height: 2rem;
    margin-bottom: 3rem;
+   max-width: 600px;  /* Prevents it from stretching too wide */
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .email-button {
@@ -412,6 +420,32 @@ header.sticky {
     background-color: var(--green);
     color: var(--dark-navy);
     font-weight: 600;
+}
+
+/* === CONTACT SECTION === */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.footer-icons {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 2.5rem;
+}
+
+.footer-icons i {
+    color: var(--blue);
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: var(--slate);
+    text-align: center;
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
@@ -463,12 +497,12 @@ header.sticky {
     }
 
     .my-name {
-        font-size: 4vw;
+        font-size: 3rem;
     }
 
     .about-icons {
         justify-content: center;
-        width: 200%; 
+        
         padding: 0; /*-Takes up 100% of first side of grid and 100% of the second-*/
     }
 
@@ -483,11 +517,11 @@ header.sticky {
     
     .profile-pic {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
     }
 
     .projects-content {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .side-bars {
@@ -531,6 +565,13 @@ header.sticky {
         color: var(--green);
     }
 
+    .footer-icons {
+        display: none;
+    }
+
+    .contact-content h1 {
+        font-size: 5vw;
+    }
 
 }
 
@@ -538,8 +579,49 @@ header.sticky {
 
 @media(min-width: 1080px) { 
 
+    header {
+        margin-bottom: 0;
+    } 
+
+    main {  
+        gap: 12rem;
+    }
+
     .profile-pic {
        width: 100%;
-       max-width: 400px;
+       max-width: 350px;
+    }
+
+    .projects-content {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .contact-content h1 {
+        font-size: 3.4rem;
+    }
+
+    .vertical-email {
+        writing-mode: vertical-rl;
+        letter-spacing: 0.2rem;
+        color: var(--green);
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media(min-width: 1300px) {
+
+    main {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;     
+    }
+
+    .bar-1 {
+        left: 60px;
+    }
+    
+    .bar-2 {
+        right: 60px;
     }
 }
