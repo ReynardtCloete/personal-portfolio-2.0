@@ -87,6 +87,7 @@ header.sticky {
     border: 2px solid var(--green);
     border-radius: 0.5rem;
     transition: 0.7s ease;
+    cursor: pointer;
 }
 
 .logo:hover {
@@ -140,12 +141,13 @@ header.sticky {
 }
 
 .resume {
-    border: 2px solid var(--green);
+    border: 1px solid var(--green);
     font-size: 0.9rem;
     border-radius: 5%;
     padding: 0.8rem;
     color: var(--green);
     transition: 0.7s ease;
+    cursor: pointer;
 }
 
 .resume:hover {
@@ -200,7 +202,7 @@ header.sticky {
 }
 
 .my-name {
-    font-size: 4.8vw;
+    font-size: 1.4rem;
 }
 
 .first {
@@ -235,12 +237,13 @@ header.sticky {
 }
 
 .contact-btn a {
-    border: 2px solid var(--green);
+    border: 1px solid var(--green);
     font-size: 0.9rem;
     border-radius: 4px;
     padding: 0.8rem 3rem;
     color: var(--lightest-slate);
     transition: 0.7s ease;
+    text-decoration: none;
 }
 
 .contact-btn a:hover {
@@ -299,6 +302,16 @@ header.sticky {
     gap: 1.1rem;
 }
 
+.about-icons p {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-icons p:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    color: var(--lightest-slate);
+}
+
 .tag {
     padding: 0.25rem 0.5rem;
     border: 1px solid var(--green);
@@ -338,6 +351,14 @@ header.sticky {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-header {
@@ -357,6 +378,11 @@ header.sticky {
 
 .project-card h3 {
     font-size: 1.2rem;
+    transition: 0.4s ease;
+}
+
+.project-card h3:hover {
+    color: var(--green);
 }
 
 .project-card p {
@@ -400,7 +426,7 @@ header.sticky {
 .contact-p-2 {
    font-size: 1rem;
    color: var(--slate);
-   line-height: 2rem;
+   line-height: 1.6rem;
    margin-bottom: 3rem;
    max-width: 600px;  /* Prevents it from stretching too wide */
    margin-left: auto;
@@ -414,6 +440,8 @@ header.sticky {
     padding: 1rem 2rem;
     letter-spacing: 0.2rem;
     transition: 0.7s ease;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .email-button:hover {
@@ -422,7 +450,7 @@ header.sticky {
     font-weight: 600;
 }
 
-/* === CONTACT SECTION === */
+/* === FOOTER SECTION === */
 
 footer {
     display: flex;
@@ -451,6 +479,12 @@ footer p {
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media(min-width: 500px) {
+    .my-name {
+        font-size: 4.8vw;
+    }
+}
 
 @media(min-width: 615px) {
 
@@ -540,12 +574,18 @@ footer p {
 
     .bar-1 i {
         font-size: 1.2rem;
+        color: var(--lightest-slate);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bar-1 i:hover {
         color: var(--green);
+        transform: translateY(-10px);
     }
 
     .vertical-line {
         width: 1px;
-        height: 100px;
+        height: 200px;
         background-color: var(--green);
     }
 
@@ -562,7 +602,15 @@ footer p {
     .vertical-email {
         writing-mode: vertical-rl;
         letter-spacing: 0.2rem;
+        cursor: pointer;
+        color: var(--lightest-slate);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+    }
+
+    .vertical-email:hover {
         color: var(--green);
+        transform: translateY(-10px);
     }
 
     .footer-icons {
@@ -584,7 +632,7 @@ footer p {
     } 
 
     main {  
-        gap: 12rem;
+        gap: 18rem;
     }
 
     .profile-pic {
@@ -598,12 +646,6 @@ footer p {
 
     .contact-content h1 {
         font-size: 3.4rem;
-    }
-
-    .vertical-email {
-        writing-mode: vertical-rl;
-        letter-spacing: 0.2rem;
-        color: var(--green);
     }
 }
 
