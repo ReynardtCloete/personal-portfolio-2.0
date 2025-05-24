@@ -60,6 +60,17 @@ h6::selection {
     color: #0f172a;
 }
 
+#torch-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;   
+    z-index: 9999; 
+}
+
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
 
 header {
@@ -622,6 +633,10 @@ footer p {
 
     .contact-content h1 {
         font-size: 5vw;
+    }
+
+    #torch-overlay {
+        display: block;
     }
 
 }
