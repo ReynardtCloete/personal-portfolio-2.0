@@ -202,7 +202,7 @@ header.sticky {
 }
 
 .my-name {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
 .first {
@@ -351,14 +351,6 @@ header.sticky {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1001;
-    cursor: pointer;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-header {
@@ -556,6 +548,17 @@ footer p {
 
     .projects-content {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
     .side-bars {
