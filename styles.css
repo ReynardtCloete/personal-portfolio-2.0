@@ -374,6 +374,10 @@ header.sticky {
 
 /* === PROJECTS SECTION === */
 
+#projects {
+    margin-bottom: 200px;
+}
+
 .projects-content {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
