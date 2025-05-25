@@ -83,7 +83,7 @@ header {
     height: 6.2rem;
     padding: 0 25px;
     transition: height 0.3s ease, box-shadow 0.3s ease;
-    z-index: 200;
+    z-index: 1000;
 }
 
 header.sticky {
@@ -122,6 +122,7 @@ header.sticky {
     gap: 3rem;
     font-size: 1.2rem;
     transition: right 0.3s ease-in-out;
+    pointer-events: none; /*-Allows me to still click project section even if fixed navbar has higher z-index-*/
 }
 
 .navbar.active {
@@ -500,9 +501,12 @@ footer p {
 
 @media(min-width: 768px) {
 
+    body {
+        gap: 0rem;
+    }
+
     main {  
         padding: 0 90px;
-        
     }
 
     header {
@@ -665,10 +669,6 @@ footer p {
     .contact-content h1 {
         font-size: 3.4rem;
     }
-
-    #torch-overlay {
-        display: block;
-    }
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
@@ -688,10 +688,8 @@ footer p {
     .bar-2 {
         right: 60px;
     }
-}
 
-@media(min-width: 1920px) {
-    .project-card {
-        z-index: 1001;
+    #torch-overlay {
+        display: block;
     }
 }
