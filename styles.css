@@ -662,10 +662,6 @@ footer p {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .project-card {
-        z-index: 1001;
-    }
-
     .contact-content h1 {
         font-size: 3.4rem;
     }
@@ -691,5 +687,9 @@ footer p {
     
     .bar-2 {
         right: 60px;
+    }
+
+    .project-card {
+        z-index: 1001;
     }
 }
