@@ -122,8 +122,8 @@ header.sticky {
     gap: 3rem;
     font-size: 1.2rem;
     transition: right 0.3s ease-in-out;
-    pointer-events: none; /*-Allows me to still click project section even if fixed navbar has higher z-index-*/
-    opacity: 0;
+    
+    
 }
 
 .navbar.active {
@@ -554,6 +554,8 @@ footer p {
         align-items: center;
         gap: 2rem;
         font-size: 1rem;
+        pointer-events: none; /*-Allows me to still click project section even if fixed navbar has higher z-index-*/
+        opacity: 0;
     }
 
     .nav-link {
