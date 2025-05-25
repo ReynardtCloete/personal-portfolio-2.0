@@ -487,10 +487,6 @@ footer p {
     .my-name {
         font-size: 4.8vw;
     }
-
-    .project-card {
-        z-index: 1001;
-    }
 }
 
 @media(min-width: 615px) {
@@ -664,6 +660,10 @@ footer p {
 
     .projects-content {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .project-card {
+        z-index: 1001;
     }
 
     .contact-content h1 {
