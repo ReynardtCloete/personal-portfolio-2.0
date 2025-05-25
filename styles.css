@@ -487,6 +487,10 @@ footer p {
     .my-name {
         font-size: 4.8vw;
     }
+
+    .project-card {
+        z-index: 1001;
+    }
 }
 
 @media(min-width: 615px) {
@@ -565,7 +569,6 @@ footer p {
     .project-card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
-        z-index: 1001;
     }
 
     .project-card:hover {
@@ -636,10 +639,6 @@ footer p {
         font-size: 5vw;
     }
 
-    #torch-overlay {
-        display: block;
-    }
-
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
@@ -669,6 +668,10 @@ footer p {
 
     .contact-content h1 {
         font-size: 3.4rem;
+    }
+
+    #torch-overlay {
+        display: block;
     }
 }
 
