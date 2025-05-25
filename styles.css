@@ -688,7 +688,9 @@ footer p {
     .bar-2 {
         right: 60px;
     }
+}
 
+@media(min-width: 1920px) {
     .project-card {
         z-index: 1001;
     }
