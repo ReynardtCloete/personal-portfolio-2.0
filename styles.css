@@ -123,6 +123,7 @@ header.sticky {
     font-size: 1.2rem;
     transition: right 0.3s ease-in-out;
     pointer-events: none; /*-Allows me to still click project section even if fixed navbar has higher z-index-*/
+    opacity: 0;
 }
 
 .navbar.active {
