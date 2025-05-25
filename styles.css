@@ -221,7 +221,7 @@ header.sticky {
 }
 
 .second {
-    color: var(--light-slate);
+    color: var(--slate);
 }
 
 .bio-text {
@@ -502,11 +502,12 @@ footer p {
 
     main {  
         padding: 0 90px;
+        
     }
 
     header {
         padding: 0 50px;
-        margin-bottom: 14rem;
+        margin-bottom: 0rem;
     }
 
     .navbar {
@@ -534,7 +535,7 @@ footer p {
     }
 
     .my-name {
-        font-size: 3rem;
+        font-size: 4.8vw;
     }
 
     .about-icons {
@@ -651,6 +652,10 @@ footer p {
 
     main {  
         gap: 18rem;
+    }
+
+    .my-name {
+        font-size: 3rem;
     }
 
     .profile-pic {
