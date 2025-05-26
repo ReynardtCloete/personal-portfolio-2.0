@@ -40,7 +40,7 @@ body {
 main {  
     display: flex;
     flex-direction: column;
-    gap: 12rem;
+    gap: 14rem;
     padding: 0 30px;
 }
 
@@ -122,8 +122,6 @@ header.sticky {
     gap: 3rem;
     font-size: 1.2rem;
     transition: right 0.3s ease-in-out;
-    
-    
 }
 
 .navbar.active {
@@ -167,6 +165,29 @@ header.sticky {
     background-color: var(--green);
     color: var(--dark-navy);
 }
+
+
+/* --- JAVASCRIPT -------------------------------------------- */
+
+.nav-link,
+.resume {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.nav-link.visible,
+.resume.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- JAVASCRIPT -------------------------------------------- */
+
+
+
+
+
 
 /* === HAMBURGER === */
 
@@ -548,14 +569,17 @@ footer p {
 
     .navbar {
         position: static; /*-Removes fixed positioning-*/
+        transform: none;
+        right: auto; /* override right: -100% */
+        height: auto; /* remove 100vh */
+        visibility: visible; /* reset visibility if used */
+        opacity: 1; /* ensure visible */
         background-color: transparent;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
         gap: 2rem;
         font-size: 1rem;
-        pointer-events: none; /*-Allows me to still click project section even if fixed navbar has higher z-index-*/
-        opacity: 0;
     }
 
     .nav-link {
@@ -684,7 +708,7 @@ footer p {
     } 
 
     main {  
-        gap: 18rem;
+        gap: 20rem;
     }
 
     .my-name {
