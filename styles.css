@@ -688,7 +688,7 @@ footer p {
     } 
 
     main {  
-        gap: 20rem;
+        gap: 8rem;
     }
 
     .my-name {
@@ -729,5 +729,11 @@ footer p {
 
     #torch-overlay {
         display: block;
+    }
+}
+
+@media(min-width: 1600px) {
+    main {
+        gap: 14px;
     }
 }
